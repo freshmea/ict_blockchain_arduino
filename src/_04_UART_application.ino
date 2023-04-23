@@ -18,25 +18,23 @@ void loop() {
   while(Serial.available())
   {
     buffer = Serial.read();
-  }
-  
-  if(buffer == 'O' || buffer == 'o')
-  {
-    for(i=0; i<8; i++)
+    if(buffer == 'O' || buffer == 'o')
     {
-      digitalWrite(pin_LED[i], HIGH);   // LED ON
+        for(i=0; i<8; i++)
+        {
+        digitalWrite(pin_LED[i], HIGH);   // LED ON
+        }
+        Serial.println("LED ON");
     }
-    Serial.println("LED ON");
-  }
-  
-  else if(buffer == 'X' || buffer == 'x')
-  {
-    for(i=0; i<8; i++)
+    
+    else if(buffer == 'X' || buffer == 'x')
     {
-      digitalWrite(pin_LED[i], LOW);   // LED OFF
+        for(i=0; i<8; i++)
+        {
+        digitalWrite(pin_LED[i], LOW);   // LED OFF
+        }
+        Serial.println("LED OFF");
     }
-    Serial.println("LED OFF");
   }
-  
 }
 
