@@ -9,4 +9,5 @@
 * 리얼 타임 설명
 * millis() 함수를 써서 구현
 * vsCode 설정
-* 
+* Serial 클래스 활용
+* UART 통신
