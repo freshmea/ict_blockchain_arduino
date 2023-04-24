@@ -11,4 +11,4 @@
 * vsCode 설정
 * Serial 클래스 활용
 * UART 통신
-* 
+* class 활용해서 아두이노 스위치 개선하기. 
