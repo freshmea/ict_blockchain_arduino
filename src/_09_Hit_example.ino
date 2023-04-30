@@ -1,7 +1,7 @@
 int pinGnd = 4;  
 int pinVcc = 3;  
 int pinHit = 2;  
-int count = 0;
+volatile int count = 0;
 void hitISR(void);
 void setup() {
   Serial.begin(115200);

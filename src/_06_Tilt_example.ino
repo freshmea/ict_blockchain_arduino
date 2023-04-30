@@ -13,7 +13,8 @@ void setup() {
   digitalWrite(pinVcc, HIGH); 
 }
 void loop() {
-  if (millis()-prevTime>500){
+  if(millis()-prevTime>500)
+  {
     if(!digitalRead(pinTilt) )  
     {
       Serial.println("Tilt ON");
@@ -24,4 +25,5 @@ void loop() {
     }
     prevTime = millis();
   }
+    //delay(500);
 }
