@@ -1,7 +1,7 @@
 int pinGnd = A2; 
 int pinVcc = A1;  
 int pinCds = A0;  
-int ledPin = 10;
+int ledPin = 11;
 void setup() {
   Serial.begin(115200);  
 
@@ -15,9 +15,9 @@ void setup() {
 
 void loop() {
   int adcData = analogRead(pinCds);
-  analogWrite(ledPin, (adcData < 612) ? adcData-150 : 511);
+  analogWrite(ledPin, adcData);
   Serial.print("CDS : ");
   Serial.println(adcData);
-  //delay(500);
+  delay(500);
 }
 

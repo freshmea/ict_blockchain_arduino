@@ -21,3 +21,6 @@
 * 사용되는 핀갯수가 넘어갈 때 LED 제어 하는 방법 
 * 자석센서 - 그냥 실습만
 * 충격센서 - 인터럽트 설명attachInterrupt volitile 설명
+* analogRead() 설명
+* 분해능 설명
+* PWM 설명. 
