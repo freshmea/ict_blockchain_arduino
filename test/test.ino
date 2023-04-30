@@ -1,27 +1,20 @@
-int pinGnd = 4; 
-int pinVcc = 3; 
-int pinTilt = 2;
-unsigned long prevTime;
- 
-void setup() {
-  Serial.begin(115200);  
+bool ledState;
 
-  pinMode(pinGnd, OUTPUT);  
-  pinMode(pinVcc, OUTPUT);  
-  pinMode(pinTilt, INPUT_PULLUP); 
-  digitalWrite(pinGnd, LOW);  
-  digitalWrite(pinVcc, HIGH); 
+void setup() {
+  pinMode(2, INPUT);
+  pinMode(7, OUTPUT);
 }
-void loop() {
-  if (millis()-prevTime>500){
-    if(!digitalRead(pinTilt) )  
-    {
-      Serial.println("Tilt ON");
+
+void loop(){
+  if(digitalRead(2)){
+    if(ledState){
+    digitalWrite(7, LOW);
+    ledState = false;
+    }else{
+    digitalWrite(7, HIGH);
+    ledState = true;
     }
-    else
-    {
-      Serial.println("Tilt OFF");
-    }
-    prevTime = millis();
+    delay(500);
   }
 }
+
