@@ -93,7 +93,7 @@ void checkPassword(int aPassword[SIZE])
   Serial.print("\tBall : ");
   Serial.print(nBall);
 
-  if(nStrike == 4) {
+  if(nStrike == SIZE) {
     Serial.println("\t<<Success>>");
   }
   else
