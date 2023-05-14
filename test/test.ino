@@ -1,19 +1,31 @@
-int pinGnd = 5;
-int pinBuzzer = 3;
+int pinGnd = 13;
+int pinEcho = 12;
+int pinTrigger = 11;
+int pinVcc = 10;
 
-int aPitchData[8] = {131, 147, 165, 175, 196, 220, 247, 262};
+void setup() {
+  Serial.begin(115200);
 
-void setup(){
   pinMode(pinGnd, OUTPUT);
+  pinMode(pinVcc, OUTPUT);
+  pinMode(pinTrigger, OUTPUT);
+  pinMode(pinEcho, INPUT);
   digitalWrite(pinGnd, LOW);
-  pinMode(pinBuzzer, OUTPUT);
+  digitalWrite(pinVcc, HIGH);
 }
 
-void loop(){
-  for(int i=0; i<8;i++){
-    tone(pinBuzzer, aPitchData[i]);
-    delay(1000);
-    noTone(pinBuzzer);
-  }
-  delay(1000);
+void loop() {
+  float fDuration, fDistance;
+  
+  digitalWrite(pinTrigger, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(pinTrigger, LOW);
+  
+  fDuration = pulseIn(pinEcho, HIGH); 
+  Serial.println(fDuration);
+  fDistance = ((float)(340 * fDuration)) / 10000 / 2;  
+  Serial.print(fDistance);
+  Serial.println("cm");
+  delay(500);
 }
+
