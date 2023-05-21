@@ -17,12 +17,16 @@ void setup() {
 void loop() {
   float fDuration, fDistance;
   
+  // digitalWrite(pinTrigger, LOW);
+  // delayMicroseconds(2);
   digitalWrite(pinTrigger, HIGH);
   delayMicroseconds(10);
   digitalWrite(pinTrigger, LOW);
   
   fDuration = pulseIn(pinEcho, HIGH); 
-  Serial.println(fDuration);
+
+
+  // Serial.println(fDuration);
   fDistance = ((float)(340 * fDuration)) / 10000 / 2;  
   Serial.print(fDistance);
   Serial.println("cm");
