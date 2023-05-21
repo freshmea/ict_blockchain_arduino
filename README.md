@@ -37,3 +37,23 @@
 maketone python-
 
 https://blog.naver.com/freshmea/222826753484
+
+
+- - -
+## 2023_5_21
+- - -
+프로젝트 공유 PPT
+
+https://docs.google.com/presentation/d/1iTlXKyeTOjwh0owHp_2P5kiQ27dnbST4ouMz7pBh5P4/edit?usp=sharing
+
+
+
+
+
+
+----
+데스크탑 .ip
+192.168.42.1
+
+sql:
+root/0000
