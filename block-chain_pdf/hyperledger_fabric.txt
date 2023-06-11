@@ -13,5 +13,5 @@ jq 설치: sudo apt-get install jq
 설치: sudo curl -sSL https://bit.ly/2ysbOFE | bash -s
 
 
-채널 만들기 : 
+채널 만들기 : ./network.sh createChannel
 채인코드 등록하기: sudo ./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-go -ccl go
