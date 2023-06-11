@@ -20,4 +20,7 @@ sudo ./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-go 
 sudo ./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-javascript/ -ccl javascript
 
 환경 변수:
+sudo nano ~/.bashrc
+
 export PATH=~/fabric/fabric-samples/bin:$PATH
+export FABRIC_CFG_PATH=~/fabric/fabric-samples/config/
