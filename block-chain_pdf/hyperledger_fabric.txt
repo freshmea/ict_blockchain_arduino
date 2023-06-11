@@ -18,3 +18,6 @@ jq 설치: sudo apt-get install jq
 sudo ./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-go -ccl go
 체인코드 등록하기 jq :
 sudo ./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-javascript/ -ccl javascript
+
+환경 변수:
+export PATH=~/fabric/fabric-samples/bin:$PATH
