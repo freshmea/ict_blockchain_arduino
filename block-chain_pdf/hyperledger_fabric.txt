@@ -10,4 +10,8 @@ https://velog.io/@hkjs96/%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8-%ED%95%98%EC%9D%B4
 docker 설치: 
 go 설치: sudo snap install go --classic
 jq 설치: sudo apt-get install jq
+설치: sudo curl -sSL https://bit.ly/2ysbOFE | bash -s
 
+
+채널 만들기 : 
+채인코드 등록하기: sudo ./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-go -ccl go
